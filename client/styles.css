@@ -1,0 +1,23 @@
+
+.header{
+	color: red;
+
+}
+.row.inputs {
+	width: 100%;
+	margin: auto;
+}
+
+h1 {
+	text-align: center;
+}
+
+
+.container{
+	width:620px;
+	margin: auto;
+}
+
+.col-md-3 {
+    display: inline-block;
+}
