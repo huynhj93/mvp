@@ -1,0 +1,19 @@
+<!doctype html>
+<html ng-app="app">
+<head>
+	<link rel="stylesheet" href="//maxcdn.bootstrapcdn.com/bootstrap/3.3.1/css/bootstrap.min.css"/>
+	<script src="https://cdnjs.cloudflare.com/ajax/libs/angular.js/1.5.8/angular.min.js"></script>
+	<script src="https://cdnjs.cloudflare.com/ajax/libs/angular.js/1.5.8/angular-route.min.js"></script>
+	<script src='app/home/API/API_KEY.js'></script>
+	<script src='app/home/home.js'></script>
+	<script src="app/app.js"></script>
+</head>
+
+<div class="container-fluid">
+	<body>
+		<h1 class="text-center">Basketball Stats</h1>
+		<div ng-view></div>
+	<!-- 	<div ng-controller='appController as vm'>{{vm.name}}</div> -->
+	</body>
+</div>
+</html>
