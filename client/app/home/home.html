@@ -1,5 +1,5 @@
-<div>{{vm.name}}</div>
 <div class = "row">
+<div>{{vm.name}}</div>
 <!-- 	<div class="col-xs-3">
 		<form ng-submit="vm.teamClick()">
 			<input type='text' ng-model="vm.teamInput" placeholder='Find your team'/>{{vm.teamInput}}
@@ -10,14 +10,27 @@
 		</ul>
 		</div> -->
 	<div class="col-xs-3">
-		<form ng-submit="vm.playerClick()">
-			<input type='text' ng-model="vm.playerInput" placeholder='Find your players'/><!-- {{vm.playerInput}} -->
+		<form name="playerForm" ng-submit="vm.playerClick()" novalidate>
+			<input type='text' ng-model="vm.playerInput" placeholder='Find your player' ng-minlength='3' class='form-control' name ="playername" required/><!-- {{vm.playerInput}} -->
 			<button class ='btn' type="submit">Enter Player Name</button>
-		</form>
-		<ul ng-show="vm.show">
-			<li ng-repeat="player in vm.playersID | filter:vm.playerInput">{{player.player_name}}</li>
-		</ul>
-		</div>
+			<div ng-show="vm.moreThanOnePlayer">{{vm.alert}}</div>
+			<ul ng-show="playerForm.playername.$valid">
+				<li ng-repeat="player in vm.playersID | filter:vm.playerInput">{{player.player_name}}</li>
+			</ul>
+	</div>
+			<!-- sadsadds -->
+	<div class="col-xs-3">
+<!-- 		<form name="dateForm">
+ -->			<input type='text' ng-model="vm.gameDateInput" placeholder='Date MMDDYY' ng-minlength='3' class='form-control' name ="datename" required/><!-- {{vm.playerInput}} -->
+			<button class ='btn' type="submit">Enter Date of Game</button>
+<!-- 			<div ng-show="vm.moreThanOnePlayer"></div>-->		
+			<ul ng-show="vm.hasData">
+<!--  			<ul ng-show="datename.$valid"> -->
+				<li ng-repeat="player in vm.playerStats | filter:vm.gameDateInput">{{player.adv_pace}}</li>
+			</ul>
+			<!-- sasdsadsa -->
+		<!-- </form> -->
+	</div>
 </div>
 
 <!--  <div class = "row">
