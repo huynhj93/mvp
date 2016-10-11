@@ -67,7 +67,7 @@ angular.module('app.home',[])
 				params:{
 					// first_name: paramsArr[0],
 					// last_name: paramsArr[1],
-					api_key:'WchlZkobLvEf8wa0eV12XRM3Sjzspmg5'
+					api_key: window.API_KEY
 				}
 			})
 		}
